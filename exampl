@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <title>检测中国身份证</title>
+    <script src="http://tuan.zol.com/js/jquery-1.8.1.js"></script>
+    <script src="https://rawgit.com/chaijiawei/checkCnIDCard/master/checkCnIDCard.js"></script>
+</head>
+<body>
+    <h3>hello man, please input card num</h3>
+    <input type="text" id="test-card" style="width:300px;" />
+</body>
+<script>
+    $('#test-card').blur(function() {
+        var cardNum = $(this).val();
+        var test = $.checkCnIDCard({cardNum: cardNum});
+        console.log(test);
+    });
+</script>
+</html>
+
